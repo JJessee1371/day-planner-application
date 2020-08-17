@@ -28,9 +28,19 @@ function store9am() {
     user = JSON.stringify(user);
     localStorage.setItem("event9", user);
 
+    // text1.val('');
+
+    // load9am();
+
+    // let lastEvent = JSON.parse(localStorage.getItem("event9"));
+    // text1.val(lastEvent.userEvent);
+}
+
+function load9am() {
     let lastEvent = JSON.parse(localStorage.getItem("event9"));
     text1.val(lastEvent.userEvent);
-}
+};
+
 
 function store10am() {
     let user = {
