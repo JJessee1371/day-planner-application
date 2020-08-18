@@ -5,7 +5,7 @@ body {
   background-color: #dad2d2;
 }
 
-textarea{
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -77,12 +77,15 @@ textarea{
 
 .past {
   background-color: #f77a73;
+  color: #000000;
 }
 
 .present {
   background-color: #67f167;
+  color: #000000;
 }
 
 .future {
   background-color: #75ddf5;
+  color: #000000;
 }

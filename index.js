@@ -1,4 +1,4 @@
-//Definin text area variables
+//Defining text area variables
 const text1 = $('#text1');
 const text2 = $('#text2');
 const text3 = $('#text3');
@@ -110,9 +110,6 @@ function store5pm() {
 
 //Set the current date to be displayed to the user
 let dateDis = $('#currentDay');
-console.log('Sanity check');
-
-
 let now = moment().format("MM/DD/YYYY");
 dateDis.text(now);
 
@@ -121,17 +118,6 @@ dateDis.text(now);
 let current = moment();
 let currentHour = current.hour();
 blockArr = [text1, text2, text3, text4, text5, text6, text7, text8, text9];
-
-// console.log(text1.attr('data-time'));
-// if (currentHour > text1.attr('data-time')) {
-//     text1.addClass('past')
-// }
-// else if (currentHour === text1.attr('data-time')) {
-//     text1.addClass('present')
-// }
-// else if (currentHour < text1.attr('data-time')) {
-//     text1.addClass('future')
-// }
 
 for (i = 0; i < blockArr.length; i++) {
     if (currentHour > blockArr[i].attr('data-time')) {
