@@ -115,3 +115,34 @@ console.log('Sanity check');
 
 let now = moment().format("MM/DD/YYYY");
 dateDis.text(now);
+
+
+//Alter the colors of the blocks if the hour has already passed
+let current = moment();
+let currentHour = current.hour();
+blockArr = [text1, text2, text3, text4, text5, text6, text7, text8, text9];
+
+// console.log(text1.attr('data-time'));
+// if (currentHour > text1.attr('data-time')) {
+//     text1.addClass('past')
+// }
+// else if (currentHour === text1.attr('data-time')) {
+//     text1.addClass('present')
+// }
+// else if (currentHour < text1.attr('data-time')) {
+//     text1.addClass('future')
+// }
+
+for (i = 0; i < blockArr.length; i++) {
+    if (currentHour > blockArr[i].attr('data-time')) {
+        blockArr[i].addClass('past')
+    }
+    else if (currentHour == blockArr[i].attr('data-time')) {
+        blockArr[i].addClass('present')
+    }
+    else if (currentHour < blockArr[i].attr('data-time')) {
+        blockArr[i].addClass('future')
+    }
+};
+
+

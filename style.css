@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: #dad2d2;
 }
 
 textarea{
@@ -48,12 +49,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #f58680;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #8de68d;
   color: white;
 }
 
@@ -61,7 +62,7 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #90d9e9;
   color: white;
 }
 
@@ -72,4 +73,16 @@ textarea{
 
 .shift-left:hover {
   -webkit-transform: translate(-40px,0);
+}
+
+.past {
+  background-color: #f77a73;
+}
+
+.present {
+  background-color: #67f167;
+}
+
+.future {
+  background-color: #75ddf5;
 }
