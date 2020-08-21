@@ -9,103 +9,55 @@ const text7 = $('#text7');
 const text8 = $('#text8');
 const text9 = $('#text9');
 
-//Event listeners for each save button
-$('#9am').on('click', store9am);
-$('#10am').on('click', store10am);
-$('#11am').on('click', store11am);
-$('#12pm').on('click', store12pm);
-$('#1pm').on('click', store1pm);
-$('#2pm').on('click', store2pm);
-$('#3pm').on('click', store3pm);
-$('#4pm').on('click', store4pm);
-$('#5pm').on('click', store5pm);
 
-//Functions store users event information in local storage
-function store9am() {
-    let user = {
-        userEvent: text1.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event9", user);
+//Event listereners for each save button
+$('#9am').on('click', function() {
+    localStorage.setItem('event9', text1. val());
+});
 
-    // text1.val('');
+$('#10am').on('click', function() {
+    localStorage.setItem('event10', text2. val());
+});
 
-    // load9am();
+$('#11am').on('click', function() {
+    localStorage.setItem('event11', text3. val());
+});
 
-    // let lastEvent = JSON.parse(localStorage.getItem("event9"));
-    // text1.val(lastEvent.userEvent);
-}
+$('#12pm').on('click', function() {
+    localStorage.setItem('event12', text4. val());
+});
 
-function load9am() {
-    let lastEvent = JSON.parse(localStorage.getItem("event9"));
-    text1.val(lastEvent.userEvent);
-};
+$('#1pm').on('click', function() {
+    localStorage.setItem('event1', text5. val());
+});
+
+$('#2pm').on('click', function() {
+    localStorage.setItem('event2', text6. val());
+});
+
+$('#3pm').on('click', function() {
+    localStorage.setItem('event3', text7. val());
+});
+
+$('#4pm').on('click', function() {
+    localStorage.setItem('event4', text8. val());
+});
+
+$('#5pm').on('click', function() {
+    localStorage.setItem('event5', text9. val());
+});
 
 
-function store10am() {
-    let user = {
-        userEvent: text2.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event10", user);
-}
-
-function store11am() {
-    let user = {
-        userEvent: text3.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event11", user);
-}
-
-function store12pm() {
-    let user = {
-        userEvent: text4.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event12", user);
-}
-
-function store1pm() {
-    let user = {
-        userEvent: text5.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event1", user);
-}
-
-function store2pm() {
-    let user = {
-        userEvent: text6.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event2", user);
-}
-
-function store3pm() {
-    let user = {
-        userEvent: text7.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event3", user);
-}
-
-function store4pm() {
-    let user = {
-        userEvent: text8.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event5", user);
-}
-
-function store5pm() {
-    let user = {
-        userEvent: text9.val().trim(),
-    }
-    user = JSON.stringify(user);
-    localStorage.setItem("event5", user);
-}
-
+//Load saved items to the specified hour blocks
+text1.val(localStorage.getItem('event9'));
+text2.val(localStorage.getItem('event10'));
+text3.val(localStorage.getItem('event11'));
+text4.val(localStorage.getItem('event12'));
+text5.val(localStorage.getItem('event1'));
+text6.val(localStorage.getItem('event2'));
+text7.val(localStorage.getItem('event3'));
+text8.val(localStorage.getItem('event4'));
+text9.val(localStorage.getItem('event5'));
 
 
 //Set the current date to be displayed to the user
@@ -114,7 +66,7 @@ let now = moment().format("MM/DD/YYYY");
 dateDis.text(now);
 
 
-//Alter the colors of the blocks if the hour has already passed
+//Changes colors of blocks depending on the time
 let current = moment();
 let currentHour = current.hour();
 blockArr = [text1, text2, text3, text4, text5, text6, text7, text8, text9];
