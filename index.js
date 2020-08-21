@@ -10,56 +10,6 @@ const text8 = $('#text8');
 const text9 = $('#text9');
 
 
-//Event listereners for each save button
-$('#9am').on('click', function() {
-    localStorage.setItem('event9', text1. val());
-});
-
-$('#10am').on('click', function() {
-    localStorage.setItem('event10', text2. val());
-});
-
-$('#11am').on('click', function() {
-    localStorage.setItem('event11', text3. val());
-});
-
-$('#12pm').on('click', function() {
-    localStorage.setItem('event12', text4. val());
-});
-
-$('#1pm').on('click', function() {
-    localStorage.setItem('event1', text5. val());
-});
-
-$('#2pm').on('click', function() {
-    localStorage.setItem('event2', text6. val());
-});
-
-$('#3pm').on('click', function() {
-    localStorage.setItem('event3', text7. val());
-});
-
-$('#4pm').on('click', function() {
-    localStorage.setItem('event4', text8. val());
-});
-
-$('#5pm').on('click', function() {
-    localStorage.setItem('event5', text9. val());
-});
-
-
-//Load saved items to the specified hour blocks
-text1.val(localStorage.getItem('event9'));
-text2.val(localStorage.getItem('event10'));
-text3.val(localStorage.getItem('event11'));
-text4.val(localStorage.getItem('event12'));
-text5.val(localStorage.getItem('event1'));
-text6.val(localStorage.getItem('event2'));
-text7.val(localStorage.getItem('event3'));
-text8.val(localStorage.getItem('event4'));
-text9.val(localStorage.getItem('event5'));
-
-
 //Set the current date to be displayed to the user
 let dateDis = $('#currentDay');
 let now = moment().format("MM/DD/YYYY");
@@ -84,3 +34,48 @@ for (i = 0; i < blockArr.length; i++) {
 };
 
 
+
+//Event listereners for each save button
+$('#9am').on('click', function() {
+    localStorage.setItem('event9', text1.val().trim());
+});
+
+$('#10am').on('click', function() {
+    localStorage.setItem('event10', text2.val().trim());
+});
+
+$('#11am').on('click', function() {
+    localStorage.setItem('event11', text3.val().trim());
+});
+
+$('#12pm').on('click', function() {
+    localStorage.setItem('event12', text4.val().trim());
+});
+
+$('#1pm').on('click', function() {
+    localStorage.setItem('event1', text5.val().trim());
+});
+
+$('#2pm').on('click', function() {
+    localStorage.setItem('event2', text6.val().trim());
+});
+
+$('#3pm').on('click', function() {
+    localStorage.setItem('event3', text7.val().trim());
+});
+
+$('#4pm').on('click', function() {
+    localStorage.setItem('event4', text8.val().trim());
+});
+
+$('#5pm').on('click', function() {
+    localStorage.setItem('event5', text9.val().trim());
+});
+
+
+//Load saved items to the specified hour blocks
+eventArr = ['event9', 'event10', 'event11', 'event12', 'event1', 'event2', 'event3', 'event4', 'event5'];
+
+for (i = 0; i < blockArr.length; i++) {
+    blockArr[i].val(localStorage.getItem(eventArr[i]));
+};
