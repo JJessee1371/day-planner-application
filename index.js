@@ -12,13 +12,13 @@ const text9 = $('#text9');
 
 //Set the current date to be displayed to the user
 let dateDis = $('#currentDay');
-let now = moment().format("MM/DD/YYYY");
-dateDis.text(now);
+let currentDay = moment().format("MM/DD/YYYY");
+dateDis.text(currentDay);
 
 
 //Changes colors of blocks depending on the time
-let current = moment();
-let currentHour = current.hour();
+let now = moment();
+let currentHour = now.hour();
 blockArr = [text1, text2, text3, text4, text5, text6, text7, text8, text9];
 
 for (i = 0; i < blockArr.length; i++) {
