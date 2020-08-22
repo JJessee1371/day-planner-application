@@ -33,6 +33,13 @@ for (i = 0; i < blockArr.length; i++) {
     }
 };
 
+//Clear scheduled events from the previous day 
+if (currentHour === 23) {
+    for (j = 0; j < blockArr.length; j++) {
+        blockArr[i].empty();
+    };
+    localStorage.clear();
+};
 
 
 //Event listereners for each save button
