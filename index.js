@@ -34,7 +34,7 @@ for (i = 0; i < blockArr.length; i++) {
 };
 
 //Clear scheduled events from the previous day 
-if (currentHour === 23) {
+if (currentHour === 18) {
     for (j = 0; j < blockArr.length; j++) {
         blockArr[i].empty();
     };
